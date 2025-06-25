@@ -1,21 +1,22 @@
 import './Ekansh.css'
 import Abc from "./Ekansh"
+import Navbar from "./Navbar"
+import Product_Card from './Product_Card'
 function App() {
   
 
   return (
     <>
-     <div style={{background:"red",fontSize:"larger" ,border:"12px solid black "}} >
-      I have A CAR
-     </div>
-     <div className="second">
-      I have a second CAR
-     </div>
-     <Abc/>
-     <div> SECOND type call</div>
-     <Abc>
+   <Navbar/>
+   <div style={{ display:"flex"}}>
 
-     </Abc>
+   <Product_Card/>
+   <Product_Card/>
+   <Product_Card/>
+   <Product_Card/>
+   <Product_Card/>
+   <Product_Card/>
+   </div>
     </>
   )
 }
