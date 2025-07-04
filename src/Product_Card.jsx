@@ -1,7 +1,7 @@
 import React from "react";
 
 function Product_Card(props) {
-  console.log(props)
+ 
  const { image, name, rating } = props.product|| {};
 
   return (

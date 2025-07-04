@@ -1052,7 +1052,13 @@ const recipes = [
 
 function App(props) {
   const [count ,pawandeep]=useState(0)
-  
+  const [food,setfood]=useState(recipes)
+       
+  const topProduct=()=>{
+    const topfood=food.filter((item)=>item.rating>4.5);
+    console.log(topfood)
+    setfood(topfood)
+  }
 const add=(()=>{
  pawandeep(count+1)
 })
@@ -1069,12 +1075,12 @@ const sub=(()=>{
   return (
     <>
       <Navbar />
-      
+<button onClick={topProduct}>Top Rated Product</button>
 
       <div style={{ display: "flex", flexWrap: "wrap" }}>
         {
-          recipes.map((element)=>{
-            return <Product_Card product={element}/>
+          food.map((element,id)=>{
+            return <Product_Card key={id} product={element}/>
           })
         }
 
